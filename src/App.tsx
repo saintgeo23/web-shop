@@ -1,25 +1,22 @@
 import React from 'react';
-import './App.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './features/Account/Login/Login';
+import Register from './features/Account/Register/Register';
+import Account from './features/Account/Account';
+import Cart from './features/Cart/Cart';
+import Home from './features/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App__card card">
-        <img
-          src="https://en.yoyostorerewind.com/cdn/shop/files/plasmacrash13_ea45495a-962e-416b-8606-a7df92c932e8.jpg?v=1716873682&width=400"
-          className="card-img-top"
-          alt="..."
-        />
-        <div className="card-body">
-          <h5 className="card-title">Plasma Crash</h5>
-          <p className="card-text">A variant of the Hydrogen Crash. Slightly smaller and with even more sleep.</p>
-          <a
-            href="https://en.yoyostorerewind.com/products/plasma-crash"
-            className="btn btn-primary"
-          >Go buy it</a>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="account/login" element={<Login />} />
+        <Route path="account/register" element={<Register />} />
+        <Route path="account" element={<Account />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
