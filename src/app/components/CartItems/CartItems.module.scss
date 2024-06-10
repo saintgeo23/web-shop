@@ -1,0 +1,15 @@
+.cart-items {
+  &__no-items {
+    color: lightgray;
+  }
+
+  &__list {
+    list-style: none;
+    max-height: 660px;
+    overflow: auto;
+  }
+
+  .list-group {
+    display: none;
+  }
+}
