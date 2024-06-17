@@ -6,6 +6,7 @@ import Register from './features/Account/Register/Register';
 import Account from './features/Account/Account';
 import Cart from './features/Cart/Cart';
 import Home from './features/Home/Home';
+import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   return (
