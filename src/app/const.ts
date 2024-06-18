@@ -1,1 +1,1 @@
-export const serverUrl = 'https://19429ba06ff2.vps.myjino.ru/api';
+export const serverUrl = 'http://19429ba06ff2.vps.myjino.ru/api';
