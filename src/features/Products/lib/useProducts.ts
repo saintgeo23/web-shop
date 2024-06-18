@@ -6,14 +6,14 @@ export const useProducts = (pageSize : number) => {
     const [products, setProducts] = useState<Product[]>([])
     const [pageNumber, setPageNumber] = useState(1);
     const [maxPage, setMaxPage] = useState(1);
-    
+
     useEffect(() => {
         getProducts(pageSize, pageNumber)
-            .then(data => { 
+            .then(data => {
                setProducts(data.data)
-               setMaxPage(data.pagination.pageSize); 
+               setMaxPage(data.pagination.pageSize);
             });
-    }, []);
+    }, [pageSize, pageNumber]);
 
     const getNextProducts = () => {
         if (pageNumber > maxPage) {
@@ -21,7 +21,7 @@ export const useProducts = (pageSize : number) => {
         }
         setPageNumber(pageNumber+1);
         getProducts(pageSize, pageNumber+1)
-            .then(data => setProducts((products) => [...products, ...data.data]));            
+            .then(data => setProducts((products) => [...products, ...data.data]));
       }
 
     return {
