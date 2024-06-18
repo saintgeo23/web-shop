@@ -13314,6 +13314,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web-shop@workspace:."
   dependencies:
+    "@babel/plugin-transform-private-property-in-object": "npm:^7.24.7"
     "@popperjs/core": "npm:^2.11.8"
     "@reduxjs/toolkit": "npm:^1.8.1"
     "@testing-library/jest-dom": "npm:^5.16.4"
